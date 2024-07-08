@@ -1,0 +1,147 @@
+:root {
+  --event-etail-pri: #4eabc4;
+  --event-etail-pri-900: #101a33;
+  --event-etail-sec: #f69c6f;
+  --event-etail-tert: #ab224e;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.hr-borders {
+  border: 3px solid var(--event-etail-pri);
+}
+
+.cross-promo-hero {
+  color: var(--event-etail-pri-900) !important;
+}
+.cross-promo-hero h1 {
+  color: var(--event-etail-pri);
+}
+
+.cross-promo-hero {
+  overflow: hidden;
+}
+
+.cross-promo-hero strong {
+  font-weight: 700;
+}
+
+.cross-promo-hero picture {
+  display: none;
+}
+
+.road-wrapper {
+  display: flex;
+  flex-flow: row;
+}
+.road {
+  background-color: var(--event-etail-pri-900);
+  flex-basis: 15%;
+}
+.road-dashed {
+  position: relative;
+  border-left: 2px dashed #fff;
+  border-right: 2px dashed #fff;
+}
+.road-dashed:after {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background-image: radial-gradient(ellipse, #ffffff 2px, #ffffff 2px, transparent 3px);
+  background-size: 75px 75px;
+  background-position: 50% 0;
+  background-repeat: repeat-y;
+}
+
+.road-icons {
+  gap: 1em;
+}
+.road-icons img {
+  max-width: 100px;
+}
+.icons-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 50px;
+  aspect-ratio: 3/3;
+  border-radius: 50%;
+}
+.icons-circle span {
+  text-shadow: 1px 1px 0.1em var(--dark);
+}
+
+@media (min-width: 768px) {
+  .cross-promo-hero picture {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  .cross-promo-hero picture img {
+    grid-row: 1;
+    grid-column: 1;
+    max-width: 300px;
+  }
+  .cross-promo-hero picture img:first-child {
+    border: 25px solid transparent;
+    outline: 10px solid var(--event-etail-pri);
+    z-index: 9999;
+  }
+  .cross-promo-hero picture img:last-child {
+    margin-top: 15em;
+    margin-left: 10em;
+  }
+  .cross-promo-hero picture img {
+    max-width: inherit;
+  }
+  .road-wrapper {
+    display: block;
+  }
+  .road {
+    padding: 2em 0;
+    border-top: 2px dashed #fff;
+    border-bottom: 2px dashed #fff;
+  }
+  .road-dashed:after {
+    border-top: 4px dashed #fff;
+  }
+  .icons-circle {
+    font-size: 3rem;
+  }
+}
+
+/*  */
+@media (min-width: 992px) {
+  .hero-texts {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 0.25em;
+  }
+
+  .hero-big-text {
+    font-size: 6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .hero-small-text {
+    font-size: 2rem;
+  }
+
+  .hero-small-text > * {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-big-text {
+    font-size: 8.1vmax;
+  }
+  .hero-small-text {
+    font-size: 3vmax;
+  }
+}
