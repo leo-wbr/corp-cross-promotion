@@ -64,6 +64,7 @@ body {
   .hero-cross-promo picture img {
     grid-row: 1;
     grid-column: 1;
+    max-width: inherit;
   }
   .hero-cross-promo picture img:first-child {
     border: 25px solid transparent;
@@ -73,9 +74,6 @@ body {
   .hero-cross-promo picture img:last-child {
     margin-top: 15em;
     margin-left: 10em;
-  }
-  .hero-cross-promo picture img {
-    max-width: inherit;
   }
 
   .road {
