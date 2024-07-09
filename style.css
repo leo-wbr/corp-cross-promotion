@@ -9,101 +9,73 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.hr-borders {
+.hero-title-border {
   border: 3px solid var(--event-etail-pri);
 }
 
-.cross-promo-hero h1 {
+/* .hero-cross-promo */
+.hero-cross-promo h1 {
   color: var(--event-etail-pri);
 }
 
-.cross-promo-hero {
-  overflow: hidden;
-}
-
-.cross-promo-hero strong {
-  font-weight: 700;
-}
-
-.cross-promo-hero picture {
+.hero-cross-promo picture {
   display: none;
-}
-
-.road-wrapper {
-  display: flex;
-  flex-flow: row;
 }
 
 .road {
   background-color: var(--event-etail-pri-900);
-  flex-basis: 15%;
   min-width: 10vmax;
   --mask: radial-gradient(4vw at 5.63vw 50%, #000 99%, #0000 101%) 0 calc(50% - 5vw) / 51% 10vw repeat-y,
     radial-gradient(4vw at -3.13vw 50%, #0000 99%, #000 101%) 2.5vw 50% / calc(51% - 2.5vw) 10vw repeat-y,
     radial-gradient(4vw at calc(100% - 5.63vw) 50%, #000 99%, #0000 101%) 100% 50%/51% 10vw repeat-y,
     radial-gradient(4vw at calc(100% + 3.13vw) 50%, #0000 99%, #000 101%) calc(100% - 2.5vw) calc(50% - 5vw) /
       calc(51% - 2.5vw) 10vw repeat-y;
-
   mask: var(--mask);
 }
-.road-dashed {
+.road-dashes {
   position: relative;
 }
-.road-dashed:after {
+.road-dashes:after {
   position: absolute;
   content: '';
   inset: 0;
   background-image: radial-gradient(ellipse, #ffffff 2px, #ffffff 2px, transparent 3px);
-  background-size: 75px 75px;
+  background-size: 50px 50px;
   background-position: 50% 50%;
-  background-repeat: repeat-y;
 }
 
-.road-icons {
-  gap: 1em;
-}
 .road-icons img {
   max-width: 100px;
 }
-.icons-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.road-icons-circle {
   max-width: 50px;
   aspect-ratio: 3/3;
-  border-radius: 50%;
 }
-.icons-circle span {
+
+.road-icons-circle span {
   text-shadow: 1px 1px 0.1em var(--dark);
 }
 
 @media (min-width: 768px) {
-  .cross-promo-hero picture {
+  .hero-cross-promo picture {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(1, 1fr);
     justify-items: center;
   }
-
-  .cross-promo-hero picture img {
+  .hero-cross-promo picture img {
     grid-row: 1;
     grid-column: 1;
-    max-width: 300px;
   }
-  .cross-promo-hero picture img:first-child {
+  .hero-cross-promo picture img:first-child {
     border: 25px solid transparent;
     outline: 10px solid var(--event-etail-pri);
     z-index: 9999;
   }
-  .cross-promo-hero picture img:last-child {
+  .hero-cross-promo picture img:last-child {
     margin-top: 15em;
     margin-left: 10em;
   }
-  .cross-promo-hero picture img {
+  .hero-cross-promo picture img {
     max-width: inherit;
-  }
-  .road-wrapper {
-    display: block;
   }
 
   .road {
@@ -115,43 +87,36 @@ body {
         calc(51% - 2.5vw) repeat-x;
   }
 
-  .road-dashed:after {
+  .road-dashes:after {
     background-repeat: repeat-x;
   }
 
-  .icons-circle {
+  .road-icons-circle {
     font-size: 3rem;
   }
 }
 
 /*  */
 @media (min-width: 992px) {
-  .hero-texts {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
+  .hero-cta-heading {
     gap: 0.25em;
   }
 
-  .hero-big-text {
+  .hero-cta-left {
     font-size: 6rem;
     font-weight: 900;
     text-transform: uppercase;
   }
-  .hero-small-text {
+  .hero-cta-right {
     font-size: 2rem;
-  }
-
-  .hero-small-text > * {
-    display: flex;
   }
 }
 
 @media (min-width: 1200px) {
-  .hero-big-text {
+  .hero-cta-left {
     font-size: 8.1vmax;
   }
-  .hero-small-text {
+  .hero-cta-right {
     font-size: 3vmax;
   }
 }
