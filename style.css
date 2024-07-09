@@ -13,9 +13,6 @@ body {
   border: 3px solid var(--event-etail-pri);
 }
 
-.cross-promo-hero {
-  color: var(--event-etail-pri-900) !important;
-}
 .cross-promo-hero h1 {
   color: var(--event-etail-pri);
 }
@@ -36,14 +33,21 @@ body {
   display: flex;
   flex-flow: row;
 }
+
 .road {
   background-color: var(--event-etail-pri-900);
   flex-basis: 15%;
+  min-width: 10vmax;
+  --mask: radial-gradient(4vw at 5.63vw 50%, #000 99%, #0000 101%) 0 calc(50% - 5vw) / 51% 10vw repeat-y,
+    radial-gradient(4vw at -3.13vw 50%, #0000 99%, #000 101%) 2.5vw 50% / calc(51% - 2.5vw) 10vw repeat-y,
+    radial-gradient(4vw at calc(100% - 5.63vw) 50%, #000 99%, #0000 101%) 100% 50%/51% 10vw repeat-y,
+    radial-gradient(4vw at calc(100% + 3.13vw) 50%, #0000 99%, #000 101%) calc(100% - 2.5vw) calc(50% - 5vw) /
+      calc(51% - 2.5vw) 10vw repeat-y;
+
+  mask: var(--mask);
 }
 .road-dashed {
   position: relative;
-  border-left: 2px dashed #fff;
-  border-right: 2px dashed #fff;
 }
 .road-dashed:after {
   position: absolute;
@@ -51,7 +55,7 @@ body {
   inset: 0;
   background-image: radial-gradient(ellipse, #ffffff 2px, #ffffff 2px, transparent 3px);
   background-size: 75px 75px;
-  background-position: 50% 0;
+  background-position: 50% 50%;
   background-repeat: repeat-y;
 }
 
@@ -101,14 +105,20 @@ body {
   .road-wrapper {
     display: block;
   }
+
   .road {
-    padding: 2em 0;
-    border-top: 2px dashed #fff;
-    border-bottom: 2px dashed #fff;
+    height: 10vmax;
+    --mask: radial-gradient(4vw at 50% 5.63vw, #000 99%, #0000 101%) calc(50% - 5vw) 0/10vw 51% repeat-x,
+      radial-gradient(4vw at 50% -3.13vw, #0000 99%, #000 101%) 50% 2.5vw/10vw calc(51% - 2.5vw) repeat-x,
+      radial-gradient(4vw at 50% calc(100% - 5.63vw), #000 99%, #0000 101%) 50% 100%/10vw 51% repeat-x,
+      radial-gradient(4vw at 50% calc(100% + 3.13vw), #0000 99%, #000 101%) calc(50% - 5vw) calc(100% - 2.5vw) / 10vw
+        calc(51% - 2.5vw) repeat-x;
   }
+
   .road-dashed:after {
-    border-top: 4px dashed #fff;
+    background-repeat: repeat-x;
   }
+
   .icons-circle {
     font-size: 3rem;
   }
