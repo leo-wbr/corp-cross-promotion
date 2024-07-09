@@ -13,7 +13,6 @@ body {
   border: 3px solid var(--event-etail-pri);
 }
 
-/* .hero-cross-promo */
 .hero-cross-promo h1 {
   color: var(--event-etail-pri);
 }
@@ -94,7 +93,6 @@ body {
   }
 }
 
-/*  */
 @media (min-width: 992px) {
   .hero-cta-heading {
     gap: 0.25em;
