@@ -12,12 +12,16 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.hero-title-border {
-  border: 3px solid var(--event-etail-pri);
+.hero-cross-promo,
+.hero-gap-filler {
+  background: #fbf5e5;
 }
 
 .hero-cross-promo h1 {
   color: var(--event-etail-pri);
+}
+.hero-title-border {
+  border: 3px solid var(--event-etail-pri);
 }
 
 .hero-cross-promo picture {
@@ -25,6 +29,7 @@ body {
 }
 
 .road {
+  /* Generator Used for Waves https://css-generators.com/wavy-shapes/ */
   background-color: var(--event-etail-pri-900);
   min-width: 10vmax;
   --mask: radial-gradient(4vw at 5.63vw 50%, #000 99%, #0000 101%) 0 calc(50% - 5vw) / 51% 10vw repeat-y,
@@ -78,6 +83,10 @@ body {
     margin-left: 10em;
   }
 
+  .hero-gap-filler {
+    height: 5vmax;
+    position: absolute;
+  }
   .road {
     height: 10vmax;
     --mask: radial-gradient(4vw at 50% 5.63vw, #000 99%, #0000 101%) calc(50% - 5vw) 0/10vw 51% repeat-x,
