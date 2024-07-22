@@ -1,0 +1,137 @@
+:root {
+  --event-etail-pri: #4eabc4;
+  --event-etail-pri-900: #101a33;
+  --event-etail-sec: #f69c6f;
+  --event-etail-tert: #ab224e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.hero-cross-promo,
+.hero-gap-filler {
+  background: #fbf5e5;
+}
+
+.hero-cross-promo h1 {
+  color: var(--event-etail-pri);
+}
+.hero-title-border {
+  border: 3px solid var(--event-etail-pri);
+}
+
+.hero-cross-promo picture {
+  display: none;
+}
+
+.path-road {
+}
+.path-road-markings {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 15s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.road-icons-wrapper {
+  position: absolute;
+  top: 0;
+}
+
+.road-icons-wrapper > div {
+  display: flex;
+  gap: 1em;
+}
+
+.road-icon-copy {
+  font-size: 0.8em;
+}
+
+.road-icon {
+  background-color: white;
+  color: white;
+  font-size: 0.95em;
+  padding: 0.35em;
+  border-radius: 50%;
+  aspect-ratio: 3/3;
+  max-width: 75px;
+  max-height: 75px;
+}
+.road-icons-wrapper div:nth-child(1n + 1) .road-icon {
+  background-color: var(--event-etail-pri);
+}
+.road-icons-wrapper div:nth-child(2n + 2) .road-icon {
+  background-color: var(--event-etail-sec);
+}
+.road-icons-wrapper div:nth-child(3n + 3) .road-icon {
+  background-color: var(--event-etail-tert);
+}
+
+.road-icon-copy {
+  background: #02051ad0;
+}
+
+@media (min-width: 768px) {
+  .hero-cross-promo picture {
+    display: grid;
+    justify-items: center;
+  }
+  .hero-cross-promo picture img {
+    grid-row: 1;
+    grid-column: 1;
+    max-width: inherit;
+  }
+  .hero-cross-promo picture img:first-child {
+    border: 25px solid transparent;
+    outline: 10px solid var(--event-etail-pri);
+    z-index: 9999;
+  }
+
+  .hero-gap-filler {
+    height: 5vmax;
+    position: absolute;
+  }
+
+  .road-icon-copy {
+    font-size: 1em;
+  }
+  .road-icon {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-cta-heading {
+    gap: 0.25em;
+  }
+
+  .hero-cta-left {
+    font-size: 6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .hero-cta-right {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-cta-left {
+    font-size: 8.1vmax;
+  }
+  .hero-cta-right {
+    font-size: 3vmax;
+  }
+}
