@@ -1,15 +1,12 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 :root {
   --event-etail-pri: #4eabc4;
   --event-etail-pri-900: #101a33;
   --event-etail-sec: #f69c6f;
   --event-etail-tert: #ab224e;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-body {
-  font-family: 'Open Sans', sans-serif;
 }
 
 .hero-cross-promo,
